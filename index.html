@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MYmusic</title>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            background: rgb(255, 255, 255);
+        }
+
+        .fl {
+            display: block;
+            float: left;
+        }
+
+        .fr {
+            display: block;
+            float: right;
+        }
+
+        .auto-img {
+            width: 100%;
+            display: block;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .d-none {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/first.css">
+    <link rel="stylesheet" href="./css/leftmenu.css">
+    <link rel="stylesheet" href="./css/second.css">
+    <link rel="stylesheet" href="./css/ilove.css">
+    <link rel="stylesheet" href="./css/lry.css">
+    <link rel="stylesheet" href="./css/songlocal.css">
+    <link rel="stylesheet" href="./css/download.css">
+    <link rel="stylesheet" href="./css/isbuy.css">
+    <link rel="stylesheet" href="./css/iyundon.css">
+</head>
+
+<body>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/rem.js"></script>
+    <audio src="" id="0"></audio>
+    <div class="song-list">
+        <!-- 首页 -->
+        <div class="song-first">
+            <div class="song-first-nav-top">
+                <div class="menu-song-list">
+                    <img src="./images/menu.png" alt="" class="auto-img" id="menu">
+                </div>
+                <div class="add-song-list">
+                    ＋
+                </div>
+                <div class="my-song-list">
+                    <span class="span-my my-song-active">我的</span>
+                    <span class="span-guan">音乐馆</span>
+                    <span class="span-fing">发现</span>
+                </div>
+                <div class="menu-find">搜索</div>
+            </div>
+            <div class="song-first-one">
+                <div class="song-first-one-1">
+                    <div class="user-song-first">
+                        <div class="user-song-first-img"><img src="./images/user.png" alt="" class="auto-img"></div>
+                        <span>立刻登录,资产云同步</span>
+                    </div>
+                    <div class="act-song-first">
+                        <div class="zhongxiang-song-first"></div>
+                        <div class="left-song-first fl">
+                            <div class="img-shuqian fl"></div>
+                            <div class="act-center-song fl">
+                                <p>活动中心</p>
+                                <p>点击查看听歌时长</p>
+                            </div>
+                        </div>
+                        <div class="left-song-first fr">
+                            <div class="img-vip fl"></div>
+                            <div class="act-center-song fl">
+                                <p>会员中心</p>
+                                <p>限定皮肤以上线</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 首页 本地歌曲 历史播放 ---- -->
+                    <div class="six-song-change-three">
+                        <div class="six-song-c-tp ssctb">
+                            <div class="ssctb-chlid">
+                                <div class="ssctb-chlid-img"><img src="./images/benmusic.png" alt="" class="auto-img"
+                                        id="local">
+                                </div>
+                                <p>本地音乐</p>
+                                <span>0</span>
+                            </div>
+                            <div class="ssctb-chlid">
+                                <div class="ssctb-chlid-img"><img src="./images/download.png" alt="" class="auto-img"
+                                        id="idownload">
+                                </div>
+                                <p>下载音乐</p>
+                                <span>0</span>
+                            </div>
+                            <div class="ssctb-chlid">
+                                <div class="ssctb-chlid-img"><img src="./images/recent.png" alt="" class="auto-img"
+                                        id="recent">
+                                </div>
+                                <p>最近播放</p>
+                                <span class="recent-spannum">0</span>
+                            </div>
+                        </div>
+                        <div class="six-song-c-bt ssctb">
+                            <div class="ssctb-chlid">
+                                <div class="ssctb-chlid-img"><img src="./images/love.png" alt="" class="auto-img"
+                                        id="ilove">
+                                </div>
+                                <p>我喜欢</p>
+                            </div>
+                            <div class="ssctb-chlid">
+                                <div class="ssctb-chlid-img"><img src="./images/cdbuy.png" alt="" class="auto-img" id="isbuy">
+                                </div>
+                                <p>已购音乐</p>
+                            </div>
+                            <div class="ssctb-chlid">
+                                <div class="ssctb-chlid-img"><img src="./images/run.png" alt="" class="auto-img" id="iyundon">
+                                </div>
+                                <p>跑步电台</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="important-change-four">
+                        <p>我的关注</p>
+                        <div class="important-change-four-dongtai">
+                            <div class="important-change-four-img">
+                                <img src="./images/21a4462309f790523d77e0580af3d7ca7bcbd568.png" alt=""
+                                    class="auto-img fl">
+                            </div>
+                            <div class="important-change-four-word">
+                                <p>来看看歌手和音乐号的动态吧</p>
+                                <p>包含上架音乐/动态/文章等</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 首页 歌单 -->
+                    <div class="important-change-five">
+                        <div class="important-change-five-top">
+                            <p>我的歌单</p>
+                            <p class="important-change-five-top-shu">|</p>
+                            <p>收藏歌单</p>
+                        </div>
+                        <div class="important-change-five-songlist">
+                            <p class="five-songlist-add fl">+</p>
+                            <span>新建歌单</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 歌曲播放历史 -->
+        <div class="song-second-recent d-none">
+            <div style="height: .7rem"></div>
+            <div class="song-second-recent-top">
+                <div class="song-second-recent-back"><img src="./images/back.png" alt="" class="auto-img "
+                        id="recent-back"></div>
+                <div class="song-second-recent-reset"><img src="./images/reset.png" alt="" class="auto-img"></div>
+                <p>最近播放</p>
+            </div>
+            <div class="song-list-every">
+                <!-- 一个一个 -->
+                <!-- <div class="song-list-one">
+                    <div class="song-list-one-img fl"></div>
+                    <div class="song-list-one-word fl">
+                        <p>那个女孩对我说的瓦打我打我打我的</p>
+                        <span>黄一旦达瓦达瓦大</span>
+                    </div>
+                    <div class='yingdong'>
+                            <div class="line1"></div>      
+                            <div class="line2"></div> 
+                            <div class="line1"></div> 
+                            <div class="line2"></div> 
+                            <div class="line1"></div> 
+                            <div class="line2"></div>   
+                            <div class="line1"></div>    
+                        </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- 歌曲我LOVE -->
+        <div class="song-second-love d-none">
+            <div style="height: .7rem"></div>
+            <div class="song-second-love-top">
+                <div class="song-second-love-back"><img src="./images/back.png" alt="" class="auto-img " id="love-back">
+                </div>
+                <div class="song-second-love-reset"><img src="./images/reset.png" alt="" class="auto-img"></div>
+                <p>我喜欢</p>
+            </div>
+            <div class="song-love-every">
+
+            </div>
+        </div>
+        <!-- 歌-本地歌曲 -->
+        <div class="song-second-local d-none">
+            <div style="height: .7rem"></div>
+            <div class="song-second-local-top">
+                <div class="song-second-local-back"><img src="./images/back.png" alt="" class="auto-img "
+                        id="local-back">
+                </div>
+                <div class="song-second-local-reset"><img src="./images/reset.png" alt="" class="auto-img"></div>
+                <p>本地音乐</p>
+            </div>
+            <div class="song-local-every">
+
+            </div>
+        </div>
+        <!-- 歌-下载歌曲 -->
+        <div class="song-second-idownload d-none">
+            <div style="height: .7rem"></div>
+            <div class="song-second-idownload-top">
+                <div class="song-second-idownload-back"><img src="./images/back.png" alt="" class="auto-img "
+                        id="idownload-back">
+                </div>
+                <div class="song-second-idownload-reset"><img src="./images/reset.png" alt="" class="auto-img"></div>
+                <p>下载音乐</p>
+            </div>
+            <div class="song-idownload-every">
+
+            </div>
+        </div>
+         <!-- 歌-购买歌曲 -->
+         <div class="song-second-isbuy d-none">
+            <div style="height: .7rem"></div>
+            <div class="song-second-isbuy-top">
+                <div class="song-second-isbuy-back"><img src="./images/back.png" alt="" class="auto-img "
+                        id="isbuy-back">
+                </div>
+                <div class="song-second-isbuy-reset"><img src="./images/reset.png" alt="" class="auto-img"></div>
+                <p>已购歌曲</p>
+            </div>
+            <div class="song-isbuy-every">
+
+            </div>
+        </div>
+         <!-- 歌-运动电台 -->
+         <div class="song-second-iyundon d-none">
+            <div style="height: .7rem"></div>
+            <div class="song-second-iyundon-top">
+                <div class="song-second-iyundon-back"><img src="./images/back.png" alt="" class="auto-img "
+                        id="iyundon-back">
+                </div>
+                <div class="song-second-iyundon-reset"><img src="./images/reset.png" alt="" class="auto-img"></div>
+                <p>运动电台</p>
+            </div>
+            <div class="song-iyundon-every">
+
+            </div>
+        </div>
+        <!-- 下导航 -->
+        <div class="song-nav-under">
+            <div class="song-nav-under-active"></div>
+            <div class="song-nav-pic">
+                <div class="pic-img fl"> <img src="./images/begin.png" alt="" class="auto-img" id="begin"> </div>
+                <div class="pic-img fl"> <img src="./images/list.png" alt="" class="auto-img "> </div>
+            </div>
+            <div class="song-nav-mou">
+                <div class="nav-mou fl"><img src="./images/谷雨.jpg" alt="" class="auto-img"></div>
+                <div class="nav-mou-span fl">
+                    <p><b> </b></p>
+                    <span> </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //左侧菜单栏 -->
+    <div class="left-menu">
+        <p></p>
+        <p>个性装扮</p>
+        <p>消息中心</p>
+        <p>免流量服务</p>
+        <p></p>
+        <p>定时关闭</p>
+        <p>仅Wi-Fi联网</p>
+        <p>流量提醒</p>
+        <p>听歌偏好</p>
+        <p></p>
+        <p>音乐网盘</p>
+        <p>清理空间</p>
+        <p>班助与反馈</p>
+        <p>关于我们</p>
+        <p></p>
+    </div>
+    <!-- 歌词 -->
+    <div class="lry">
+        <div class="lry-background"></div>
+        <div class="lry-lry">
+            <div class="lry-lry-lry">
+                <!-- <p>dwadwadwad</p>
+                <p>dwadwadwad</p>
+                <p>dwadwadwad</p>
+                <p>dwadwadwad</p>
+                <p>dwadwadwad</p>
+                <p>dwadwadwad</p> -->
+            </div>
+        </div>
+        <div class="lry-nav-top">
+            <div class="lry-nav-top-back">
+                <img src="./images/backlry.png" alt="" class="auto-img " id="lry-back">
+            </div>
+            <p>他偷走我的梦</p>
+        </div>
+        <div class="lry-nav-under">
+            <div class="lry-nav-under-one">
+                <div><img src="./images/lovedubble.png" alt="" class="auto-img"></div>
+                <div><img src="./images/videoplay.png" alt="" class="auto-img"></div>
+                <div><img src="./images/downloaddd.png" alt="" class="auto-img"></div>
+                <div><img src="./images/tall.png" alt="" class="auto-img"></div>
+                <div><img src="./images/threepoint.png" alt="" class="auto-img"></div>
+            </div>
+            <div class="lry-nav-under-two">
+                <p class="fl">00:00</p>
+                <div class="layer"></div>
+                <div class="paoos-ud">
+                    <div class="paoos-up"></div>
+                    <div class="paoos-mask"></div>
+                </div>
+                <p class="fr">00:00</p>
+            </div>
+            <div class="lry-nav-under-three">
+                <div class="song-circle"><img src="./images/3.png" alt="" class="auto-img" id="playstyle"></div>
+                <div class="lry-playof">
+                    <img src="./images/left.png" alt="" class="fl" style="width: 1rem;" id="songlast">
+                    <img src="./images/beginblue.png" alt="" class="beginblue">
+                    <img src="./images/right.png" alt="" class="fr" style="width: 1rem;" id="songnext">
+                </div>
+                <div class="song-lry-love"><img src="./images/love_mo.png" alt="" class="auto-img" id="lovedof"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/ajax.js"></script>
+    <script>
+        $('.song-first-one').css({
+            height: $(window).height()
+        })
+        // window.onload=function(){
+        //     console.log('w')
+
+        //     }
+        var menuis = false;
+        $(function () {
+            var $lry_lry_lry = $('.lry-lry-lry')
+            var $lry_nav_top = $('.lry-nav-top>p')
+            var $fourtime = $('.lry-nav-under-two>p')
+            var $lovedof = $('#lovedof')
+            var $playstyle = $('#playstyle')
+            var $recent_back = $('#recent-back');
+            var $love_back = $('#love-back')
+            var $local_back = $('#local-back');
+            var $isbuy_back = $('#isbuy-back')
+            var $iyundon_back = $('#iyundon-back')
+            var $idownload_back = $('#idownload-back')
+            var $left_menu = $('.left-menu');
+            var $recent = $('#recent');
+            var $lry = $('.lry');
+            var $song_second_recent = $('.song-second-recent');
+            var $ilove = $('#ilove');
+            var $local = $('#local');
+            var $idownload = $('#idownload')
+            var $isbuy = $('#isbuy')
+            var $iyundon = $('#iyundon')
+            var $song_se_love = $('.song-second-love');
+            var $song_se_local = $('.song-second-local');
+            var $song_se_idownload = $('.song-second-idownload');
+            var $song_se_isbuy = $('.song-second-isbuy');
+            var $song_se_iyundon = $('.song-second-iyundon');
+            var $song_nav_mou = $('.song-nav-mou');
+            var $mask = $('.paoos-mask');
+            var $paoos = $('.paoos-ud');
+            var $layer = $('.layer');
+            var $lry_back = $('#lry-back');
+            var $songlast = $('#songlast');
+            var lrypHeight = 0;
+            var $songnext = $('#songnext');
+            var wwidth = $(window).width();
+            var durationtime = 0;
+            var currenttime = 0;
+            var audioCurrentTime = 0;
+            var option = {
+                isplay: false,
+                percent: 0,
+                song_time_precent: 0,
+                playstyle: 3,
+                loved: 'mo',
+                numbersong: 15
+            }
+            $playstyle.on('click', function () {
+                option.playstyle = --option.playstyle < 1 ? 3 : option.playstyle--;
+                $(this).attr('src', './images/' + option.playstyle + '.png')
+            })
+            $lovedof.on('click', function () {
+                if (option.loved == 'mo') {
+                    option.loved = 'on'
+                } else {
+                    option.loved = 'mo'
+                }
+                $(this).attr('src', './images/love_' + option.loved + '.png')
+            })
+            $songlast.on('click', function () {
+                num_song_i = data_song.song_id.indexOf(data_song.point_id);
+                num_song_i = num_song_i - 1 < 0 ? data_song.song_id.length - 1 : num_song_i - 1;
+                $nav_mou_img.attr("src", data_song.pic[num_song_i]);
+                $nav_mou_b.text(data_song.song_name[num_song_i]);
+                $nav_mou_span.text(data_song.songer[num_song_i]);
+                data_song.point_id = data_song.song_id[num_song_i];
+                $audio.attr('src', url + data_song.point_id);
+                $audio[0].play();
+                if ($that != undefined) {
+                    $that.hide();
+                }
+                $that = $('#' + data_song.point_id.toString()).find('.yingdong');
+                $that.show();
+            })
+            $songnext.on('click', function () {
+                num_song_i = data_song.song_id.indexOf(data_song.point_id);
+                num_song_i = num_song_i + 1 > data_song.song_id.length - 1 ? 0 : num_song_i + 1;
+                $nav_mou_img.attr("src", data_song.pic[num_song_i]);
+                $nav_mou_b.text(data_song.song_name[num_song_i]);
+                $nav_mou_span.text(data_song.songer[num_song_i]);
+                data_song.point_id = data_song.song_id[num_song_i];
+                $audio.attr('src', url + data_song.point_id);
+                $audio[0].play();
+                if ($that != undefined) {
+                    $that.hide();
+                }
+                $that = $('#' + data_song.point_id.toString()).find('.yingdong');
+                $that.show();
+            })
+            $('.my-song-list>span').on('click', function () {
+                if (!$(this).hasClass('my-song-active')) {
+                    $('.my-song-active').removeClass('my-song-active');
+                    $(this).addClass('my-song-active');
+                    console.log('执行了')
+                }
+                //首页歌单--》我的
+                if ($(this).hasClass('span-my')) {
+                    console.log('打开我的歌单')
+                }
+            })
+            $('#menu').on('click', function () {
+                console.log('打开左侧菜单栏')
+                $left_menu.css({
+                    width: 85 + '%',
+                    opacity: 1
+                });
+                var time = setTimeout(function () {
+                    console.log('我只执行一次哦')
+                    menuis = true;
+
+                }, 200)
+
+            })
+            $('.song-list').on('click', function () {
+                if (menuis === true) {
+                    $left_menu.css({
+                        width: 0,
+                    })
+                    var time = setTimeout(function () {
+                        console.log('我只执行一次哦')
+                        menuis = false;
+                        $left_menu.css({
+                            opacity: 0
+                        });
+                    }, 200)
+                }
+            })
+            $recent.on('click', function () {
+                if (menuis === false) {
+                    $song_second_recent.removeClass('d-none');
+                }
+            })
+            $recent_back.on('click', function () {
+                $song_second_recent.addClass('d-none');
+            })
+            $lry_back.on('click', function () {
+                console.log('1111')
+                $lry.css({
+                    height: 0,
+                });
+            })
+            $love_back.on('click', function () {
+                $song_se_love.addClass('d-none');
+            })
+            $local_back.on('click', function () {
+                $song_se_local.addClass('d-none');
+            })
+            $idownload_back.on('click', function () {
+                $song_se_idownload.addClass('d-none');
+            })
+            $isbuy_back.on('click', function () {
+                $song_se_isbuy.addClass('d-none')
+            })
+            $iyundon_back.on('click', function () {
+                $song_se_iyundon.addClass('d-none')
+            })
+            $('#begin').on('click', function () {
+                if (data_song.songYofN === false) {
+                    $audio[0].play();
+                    $(this).attr('src', './images/stop.png');
+                    $('.beginblue').attr('src', './images/stopblue.png')
+                    data_song.songYofN = true;
+                } else {
+                    $audio[0].pause();
+                    $(this).attr('src', './images/begin.png');
+                    $('.beginblue').attr('src', './images/beginblue.png');
+                    data_song.songYofN = false;
+                }
+
+            })
+            $('.beginblue').on('click', function () {
+                if (data_song.songYofN === false) {
+                    $audio[0].play();
+                    $('#begin').attr('src', './images/stop.png');
+                    $(this).attr('src', './images/stopblue.png');
+                    data_song.songYofN = true;
+                } else {
+                    $audio[0].pause();
+                    $('#begin').attr('src', './images/begin.png');
+                    $(this).attr('src', './images/beginblue.png');
+                    data_song.songYofN = false;
+                }
+            })
+            $ilove.on('click', function () {
+                $song_se_love.removeClass('d-none')
+            })
+            $local.on('click', function () {
+                $song_se_local.removeClass('d-none')
+            })
+            $idownload.on('click', function () {
+                $song_se_idownload.removeClass('d-none')
+            })
+            $isbuy.on('click', function () {
+                $song_se_isbuy.removeClass('d-none')
+            })
+            $iyundon.on('click', function () {
+                $song_se_iyundon.removeClass('d-none')
+            })
+            $song_nav_mou.on('click', function () {
+                $lry.css({
+                    height: 100 + '%',
+                })
+                console.log('成功');
+            })
+            $audio[0].oncanplay = function () {
+                console.log('成功');
+                durationtime = this.duration;
+                console.log(data_song.point_id)
+                $fourtime[1].innerText = time(durationtime);
+                $lry_nav_top.text(data_song.song_name[num_song_i]);
+                $.ajax({
+                    type: 'GET',
+                    url: 'https://www.arthurdon.top:10099/lyric?id=' + data_song.point_id,
+                    success: function (data) {
+                        var zzz = data.lrc.lyric.split(/[\n\r]+/);
+                        var aaa = [];
+                        var bbb = [];
+                        data_song.song_lrc = [];
+                        var aaaa;
+                        $lry_lry_lry.html('')
+                        for (let i = 0; i < zzz.length; i++) {
+                            if (zzz[i].slice(10) != '') {
+                                aaaa = zzz[i].split(/]/)[1];
+                                bbb.push(aaaa);
+                                $lry_lry_lry.append(`<p>${aaaa}</p>`)
+                                aaa.push(zzz[i].split(/]/)[0].slice(1, 3) * 60 + Number(zzz[i]
+                                    .split(/]/)[0].slice(4)))
+                            }
+                        }
+                        data_song.song_lrc.push(aaa)
+                        data_song.song_lrc.push(bbb)
+                        lrypHeight = $lry_lry_lry.find('p').height();
+                        console.log(lrypHeight);
+                    }
+                })
+            }
+            $audio[0].ontimeupdate = function () {
+                currenttime = this.currentTime
+                if (isChange == 0) {
+                    $fourtime[0].innerText = time(currenttime);
+                    //     console.log(wwidth)
+                    //     console.log(currenttime);
+                    //   console.log(durationtime);
+                    $('.song-nav-under-active').css({
+                        width: (currenttime / durationtime) * wwidth
+                    })
+                    $('.paoos-up').css({
+                        width: (currenttime / durationtime) * $paoos.width()
+                    })
+                    $mask.css({
+                        left: (currenttime / durationtime) * ($paoos.width() - $mask.width())
+                    })
+                }
+                if (data_song.song_lrc[0] != undefined) {
+                    for (let i = 0; i < data_song.song_lrc[0].length; i++) {
+                        var MinTime = data_song.song_lrc[0][i];
+                        var MaxTime = i + 1 >= data_song.song_lrc[0].length ? Infinity : data_song.song_lrc[
+                            0][i + 1];
+                        if (currenttime >= MinTime && currenttime < MaxTime) {
+                            $('.color-lry').removeClass('color-lry')
+                            console.log(i);
+                            $lry_lry_lry.css({
+                                top: 4.5 - .8 * i + 'rem'
+                            })
+                            $lry_lry_lry.find('p').eq(i).addClass('color-lry');
+                        }
+                    }
+                }
+            }
+            $audio[0].onended = function () {
+                if (option.playstyle == 3) {
+                    num_song_i = parseInt(data_song.song_id.length * Math.random());
+                    $nav_mou_img.attr("src", data_song.pic[num_song_i]);
+                    $nav_mou_b.text(data_song.song_name[num_song_i]);
+                    $nav_mou_span.text(data_song.songer[num_song_i]);
+                    data_song.point_id = data_song.song_id[num_song_i];
+                    $audio.attr('src', url + data_song.point_id);
+                    if ($that != undefined) {
+                        $that.hide();
+                    }
+                    $that = $('#' + data_song.point_id.toString()).find('.yingdong');
+                    $that.show();
+                } else if (option.playstyle == 2) {
+                    num_song_i = data_song.song_id.indexOf(data_song.point_id);
+                    num_song_i = num_song_i + 1 > data_song.song_id.length - 1 ? 0 : num_song_i + 1;
+                    $nav_mou_img.attr("src", data_song.pic[num_song_i]);
+                    $nav_mou_b.text(data_song.song_name[num_song_i]);
+                    $nav_mou_span.text(data_song.songer[num_song_i]);
+                    data_song.point_id = data_song.song_id[num_song_i];
+                    $audio.attr('src', url + data_song.point_id);
+                    if ($that != undefined) {
+                        $that.hide();
+                    }
+                    $that = $('#' + data_song.point_id.toString()).find('.yingdong');
+                    $that.show();
+                }
+                $audio[0].play();
+            }
+            var isChange = 0;
+            $layer.on('touchstart', function (e) {
+                isChange = 1;
+                move.call(this, e, function () {
+                    audioCurrentTime = $audio[0].duration
+                });
+            })
+            $layer.on('touchmove', function (e) {
+                isChange = 1;
+                move.call(this, e, function () {
+                    audioCurrentTime = $audio[0].duration
+                });
+            })
+            $layer.on('touchend', function (e) {
+                song_time_precent = $('.paoos-up').width() / $paoos.width();
+                console.log(song_time_precent)
+                if (audioCurrentTime != null) {
+                    $audio[0].currentTime = audioCurrentTime * song_time_precent;
+                }
+                audioCurrentTime = null;
+                isChange = 0;
+            })
+            //懒加载
+            var times = setInterval(function () {
+                // console.log(data_song.song_id.length)
+                // console.log($('.song-list-one:last').offset().top)
+                // console.log($(window).height())
+                if ($('.song-list-one:last').offset().top < $(window)
+                    .height()*1.3 && $('.song-list-one:last').offset().top != 0) {
+                    // console.log(data_quan);
+                    // if()
+                    
+                    var num15 = 15;
+                    // console.log(data_quan.code)
+                    num15 = option.numbersong + 15 > data_quan.code ? data_quan.code - option
+                        .numbersong : num15;
+                    var songer;
+                    for (let i = option.numbersong; i < option.numbersong + num15; i++) {
+                        songer = [];
+                        for (let j = 0; j < songsDetail[i].ar.length; j++) {
+                            songer.push(songsDetail[i].ar[j].name);
+                        }
+                        str = `<div class="song-list-one" id="${songsDetail[i].id}" data-pic='${i}' data-play=0>
+                             <div class="song-list-one-img fl " style="background:url(${songsDetail[i].al.picUrl});background-size:cover; "></div>
+                        <div class="song-list-one-word fl">
+                          <p>${songsDetail[i].name}</p>
+                      <span>${songer.join('/')}</span>
+                     </div>
+                     <div class='yingdong'>
+                     <div class="line1"></div>      
+                     <div class="line2"></div> 
+                     <div class="line1"></div> 
+                      <div class="line2"></div> 
+                      <div class="line1"></div> 
+                      <div class="line2"></div>   
+                      <div class="line1"></div>    
+                  </div>
+                     </div>`
+                        $('.song-list-every').append(str);
+                        data_song.pic.push(songsDetail[i].al.picUrl);
+                        data_song.songer.push(songer.join('/'));
+                        data_song.song_name.push(songsDetail[i].name);
+                        data_song.song_id.push(songsDetail[i].id);
+                    }
+                    if(option.numbersong + 15>data_quan.code&&option.numbersong + 1<data_quan.code){
+                        $('.song-list-every').append(`<p style='width:100%;line-height:60px;text-align:center;'>我是有底线的-_-!</p>`);
+                    }
+                    option.numbersong = option.numbersong + 15;
+                    // console.log(data_song.pic);
+                    // console.log(data_song.songer)
+                    // console.log(data_song.song_name)
+                    // console.log(data_song.song_id)
+                    var $song_list_one = $('.song-list-one');
+                    $('.yingdong').hide();
+                    $song_list_one.on('click', function () {
+                        if (data_song.point_id != Number($(this).attr('id'))) {
+                            num_song_i = Number($(this).data('pic'))
+                            if ($that != undefined) {
+                                $that.hide();
+                            }
+                            $(this).find('.yingdong').show();
+                            // console.log($(this).find('.yingdong'));
+                            // console.log($(this).attr('id'))
+                            $that = $(this).find('.yingdong');
+                            data_song.point_id = Number($(this).attr('id'));
+                            // console.log('wdawd', data_song.point_id)
+                            var zidx = $(this).data('pic');
+                            $nav_mou_img.attr("src", data_song.pic[zidx]);
+                            $nav_mou_b.text(data_song.song_name[zidx]);
+                            $nav_mou_span.text(data_song.songer[zidx]);
+                            $audio.attr('src', url + data_song.point_id);
+                            $('#begin').attr('src', './images/stop.png');
+                            data_song.songYofN = true;
+                            $audio[0].play();
+                        }
+                    })
+                }
+
+            }, 2000)
+
+            function time(time) {
+                return (parseInt(time / 60) > 9 ? parseInt(time / 60) : '0' + parseInt(time / 60)) + ':' + (
+                    parseInt(time % 60) > 9 ? parseInt(time % 60) : '0' + parseInt(time % 60))
+            }
+            //move
+            var maskWidth = $mask.width();
+            var paoosWidth = $paoos.width();
+            var upleft = $paoos.offset().left;
+            var maxLeft = paoosWidth - maskWidth;
+            // console.log(upleft)
+            var minLeft = 0;
+
+            function move(e, fn) {
+                var x = e.targetTouches[0].pageX - upleft;
+                console.log(x)
+                var left = x - maskWidth / 2;
+                left = left >= maxLeft ? maxLeft : left <= minLeft ? minLeft : left;
+                $mask.css({
+                    left: left + 'px'
+                })
+                fn(left / maxLeft)
+                var w = x;
+                w = w >= paoosWidth ? paoosWidth : w <= 0 ? 0 : w;
+                $('.paoos-up').css({
+                    width: w + 'px'
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>

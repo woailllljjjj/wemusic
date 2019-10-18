@@ -1,0 +1,42 @@
+.song-second-local{
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:3;
+    font-size: 20px;
+}
+.song-second-local-top{
+    width: 100%;
+    height: 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.song-second-local-back{
+    width: .5rem;
+    position: absolute;
+    top: .05rem;
+    left: .2rem;
+}
+.song-second-local-reset{
+    width: .6rem;
+    position: absolute;
+    top: .05rem;
+    right: .2rem;
+}
+.song-local-every{
+    position: absolute;
+    width: 100%;
+    top: 1.7rem;
+    left: 0;
+    right: 0;
+    bottom: 1.2rem;
+    /* background: blue; */
+    overflow-y: auto;
+    border-top: 1px solid rgb(200, 200, 200);
+    font-size: 16px;
+    color: rgb(88, 88, 88);
+}

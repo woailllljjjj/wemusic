@@ -1,0 +1,122 @@
+.song-second-recent{
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:3;
+    font-size: 20px;
+}
+.song-second-recent-top{
+    width: 100%;
+    height: 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.song-second-recent-back{
+    width: .5rem;
+    position: absolute;
+    top: .05rem;
+    left: .2rem;
+}
+.song-second-recent-reset{
+    width: .6rem;
+    position: absolute;
+    top: .05rem;
+    right: .2rem;
+}
+.song-list-every{
+    position: absolute;
+    width: 100%;
+    top: 1.7rem;
+    left: 0;
+    right: 0;
+    bottom: 1.2rem;
+    /* background: blue; */
+    overflow-y: auto;
+    border-top: 1px solid rgb(200, 200, 200);
+    font-size: 16px;
+    color: rgb(88, 88, 88);
+}
+.song-list-one{
+    width: 100%;
+    height: 1.3rem;
+    background: rgb(238, 238, 238);
+    padding-top:1px ;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    overflow: hidden;
+    position: relative;
+}
+.song-list-one-img{
+    width: .9rem;
+    height:.9rem;
+    margin-left:0.1rem; 
+    margin-top:.20rem; 
+    margin-right:.2rem; 
+    border-radius: 50%;
+  
+}
+.song-list-one-word{
+    margin-top:.20rem; 
+    width: 60%;
+    height: .9rem;
+}
+.song-list-one-word>span{
+   font-size: 14px;
+   color: rgb(134, 134, 134);
+   white-space: nowrap;
+   width: 100%;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+.song-list-one-word>p{
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ }
+ .line1 {
+    animation: sc .15s linear 0s infinite alternate paused;
+    animation-play-state: running;
+}
+
+.line2 {
+    animation: sc .15s linear .15s infinite alternate paused;
+    animation-play-state: running;
+}
+.yingdong>div:nth-child(2n) {
+    background: rgba(94, 131, 251, 0.472);
+
+    border-radius: 10px;
+}
+
+.yingdong {
+    height: 0.5rem;
+    position: absolute;
+    right: 0.2rem;
+    top: 0.3rem;
+    z-index: 0;
+}
+
+.yingdong>div {
+    width: 3px;
+    height: 0.4rem;
+    float: left;
+    background: rgba(1, 178, 248, 0.486);
+    border-radius: 10px;
+    margin: 0 0.02rem;
+}
+
+@keyframes sc {
+
+    0% {
+        transform: scaleY(.5);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+
+}

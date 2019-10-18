@@ -1,0 +1,313 @@
+.song-nav-under {
+    width: 100%;
+    height: 1.2rem;
+    background: rgb(253, 253, 253);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    border-top: 2px solid #ddd;
+}
+
+.song-nav-pic {
+    width: 2rem;
+    padding: 1px;
+    position: absolute;
+    right: .1rem;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.pic-img {
+    width: 35%;
+    margin-left: 0.5rem;
+}
+
+.pic-img:first-child {
+    margin-left: 0rem;
+}
+
+.song-nav-mou {
+    width: 3.5rem;
+    position: absolute;
+    top: 50%;
+    left: .2rem;
+    transform: translate(0%, -50%);
+}
+
+.nav-mou {
+    width: 25%;
+    margin-right: .2rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.nav-mou-span {
+  
+    width: 60%;
+    font-size: 14px;
+}
+
+.nav-mou-span>p {
+    margin: 0;
+    white-space: nowrap;
+    width: 120%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav-mou-span>span {
+    color: rgb(119, 119, 119);
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.song-first {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.song-first-nav-top {
+    width: 100%;
+    height: 1.5rem;
+    padding-top: .7rem;
+    background: #30C27C;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.my-song-list {
+    width: 4rem;
+    margin: auto;
+    font-size: 20px;
+}
+
+.span-my,
+.span-guan,
+.span-fing {
+    display: block;
+    float: left;
+    margin-left: .3rem;
+    color: rgb(223, 223, 223);
+}
+
+.menu-song-list {
+    width: .5rem;
+    position: absolute;
+    top: .7rem;
+    left: .2rem;
+   
+}
+.add-song-list{
+    width: 25px;
+    height:25px ;
+    position: absolute;
+    top: .66rem;
+    right: .12rem;
+    font-size: 30px;
+    line-height: 23px;
+    color: rgb(219, 219, 219);
+}
+.menu-find {
+    width: 96%;
+    height: .6rem;
+    background: rgba(0, 0, 0, 0.212);
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 1.4rem;
+    color: rgba(255, 255, 255, 0.596);
+    text-align: center;
+    border-radius: 5px;
+    line-height: 25px;
+}
+
+.song-first-one {
+    height: 0;
+    width: 100%;
+    overflow-y: auto;
+}   
+
+.song-first-one-1 {
+    height: 16rem;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 2.5rem;
+    /* background: red; */
+}
+
+.user-song-first {
+    width: 5rem;
+    margin: auto;
+    font-size: 20px;
+    line-height: .75rem;
+}
+
+.user-song-first-img {
+    margin-right: .2rem;
+    float: left;
+    width: 15%;
+}
+
+.act-song-first {
+    width: 96%;
+    height: 1.2rem;
+    margin: auto;
+    margin-top: .4rem;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.089);
+    border-radius: 5px;
+    position: relative;
+    font-size: 13px;
+}
+
+.zhongxiang-song-first {
+    position: absolute;
+    width: 1px;
+    height: .5rem;
+    background: rgb(95, 95, 95);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.left-song-first {
+    width: 3.5rem;
+    height: 1.2rem;
+    padding-top: 1px;
+    color: rgb(105, 105, 105);
+}
+
+.img-shuqian {
+    width: .5rem;
+    height: .5rem;
+    margin-top: .35rem;
+    background: url(../images/shuqiang.png);
+    background-size: cover;
+    margin-left: .2rem;
+}
+
+.act-center-song {
+    margin-left: .15rem;
+    margin-top: .22rem;
+}
+
+.img-vip {
+    width: .6rem;
+    height: .5rem;
+    margin-top: .35rem;
+    background: url(../images/wode_icon_vip2.png);
+    background-size: cover;
+    margin-left: .2rem;
+}
+
+.six-song-change-three {
+    width: 96%;
+    margin: auto;
+    padding:1px ;
+    margin-top:.5rem; 
+}
+
+.ssctb {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.ssctb-chlid {
+    width: 33%;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+}
+.ssctb-chlid p{
+    margin-top:.1rem;
+    font-size: 18px;
+}
+.ssctb-chlid-img {
+    margin: auto;
+    width: 35%;
+}
+.six-song-c-bt{
+
+   padding-top:.3rem ; 
+}
+.important-change-four{
+    width: 100%;
+    font-size: 18px;
+    margin-top: .5rem;
+    padding:0 .3rem;
+}
+.important-change-four-dongtai{
+    width: 100%;
+    height: 1.5rem;
+    padding: 1px;
+}
+.important-change-four-img{
+    margin-top:.1rem; 
+    width: 1.5rem;
+    box-shadow: 0 -1px 10px 5px  rgba(0, 0, 0, 0.041); 
+}  
+.important-change-four-word{
+    width:80%;
+    margin-left:0.2rem;
+    margin-top:0.5rem; 
+    font-size: 15px;
+    text-align: center;
+    color: rgb(87, 87, 87);
+} 
+.important-change-five{
+    width: 100%;
+    font-size: 18px;
+    margin-top: .5rem;
+    padding:0 .3rem;
+}
+.important-change-five-top{
+    overflow: hidden;
+}
+.important-change-five-top>p{
+ float: left;
+ font-size: 14px;
+ color: rgb(100, 100, 100);
+}
+.important-change-five-top-shu{
+   padding: 0 0.2rem;
+}
+.five-songlist-add{
+    width: 50px;
+    height: 50px;
+    background: rgb(236, 236, 236);
+    text-align: center;
+    font-size: 30px;
+    line-height: 43px;
+    color: rgb(161, 161, 161);
+    margin-right:.2rem; 
+}
+.important-change-five-songlist{
+    margin-top:0.2rem ;
+}
+.important-change-five-songlist>span{
+    line-height: .9rem;
+    font-size: 15px;
+}
+.my-song-active{
+    color: #fff;
+}
+.song-nav-under-active{
+    width: 0;
+    height: 2px;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    background: linear-gradient(to right, rgb(0, 255, 64) , rgb(2, 248, 43));
+    border-radius:5px; 
+}

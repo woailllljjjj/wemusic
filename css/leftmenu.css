@@ -1,0 +1,20 @@
+.left-menu{
+    width: 0;
+    height: 100%;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:11;
+    transition: 0.2s;
+    overflow: hidden;
+    box-shadow: 0 10px 100px 100px rgba(0, 0, 0, 0.554);
+    font-size: 20px;
+    opacity: 0;
+}
+.left-menu p{
+    margin: .3rem 0 0 .2rem;
+    width: 40%;
+    overflow: hidden;
+    height: 0.5rem;
+}
